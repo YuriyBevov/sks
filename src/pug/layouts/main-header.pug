@@ -1,0 +1,25 @@
+include ../mixins/ui/main-logo
+
+header.header
+  .lw-container.header__container
+    +main-logo({
+      cls: '',
+      logoImg: '',
+      logoHeight: '',
+      logoWidth: '',
+      logoAlt: '',
+      href: '',
+    })
+
+    .header__nav
+      include ../components/nav
+    .header__phone
+      include ../includes/company-phone
+
+    button(type="button" aria-label="Заказать обратный звонок" data-modal-anchor="callback").lw-main-btn.header__callback-btn.js-callback-modal-opener
+      svg(width="20" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-phone")
+      span Заказать звонок
+
+    include ../components/burger
+

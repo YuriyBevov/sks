@@ -1,0 +1,30 @@
+include ../mixins/main-input
+
+mixin modal-form(data)
+  form(action='#' id="offer-form").offer-form
+    input(type="hidden" name="Заполненная форма" value= data.formName)
+
+    each field in data.fields
+      .offer-form__field
+        if field.type == 'text' || field.type == 'tel'
+          +main-input({
+            type: field.type,
+            label: field.label,
+            id: field.id,
+            required: field.required,
+            name: field.name
+          })
+        if field.type == 'file'
+          label(for= field.id)!= field.label
+          label(for= field.id).file-attach-fake-control
+            svg(width="24" height="24")
+              use(xlink:href="./assets/sprite.svg#icon-attach")
+            span!= field.label
+          input(type="file" id= field.id name="Файл")
+        if field.type == 'textarea'
+          label(for= field.id)!= field.label
+          textarea(id= field.id)
+    .offer-form__footer
+      button(type="submit").lw-main-btn!= data.buttonText
+      small Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.
+

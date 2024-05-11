@@ -1,0 +1,43 @@
+include ../mixins/main-input
+
+form(action='mail.php' id="offer-form").offer-form
+  <input type="hidden" name="Заполненная форма" value="Рассчитать стоимость" id="offer-form-title">
+
+  .offer-form__field
+    +main-input({
+      type: 'text',
+      label: 'Имя*',
+      id: 'user_name',
+      required: true,
+      name: 'Имя'
+    })
+  .offer-form__field
+    +main-input({
+      type: 'tel',
+      label: 'Номер телефона*',
+      required: true,
+      id: 'user_phone',
+      name: 'Телефон'
+    })
+  .offer-form__field
+    +main-input({
+      type: 'text',
+      label: 'Электронная почта',
+      id: 'user_email',
+      name: 'E-mail'
+    })
+  .offer-form__field
+    label(for="user_file") Прикрепить чертеж или тех. задание
+    label(for="user_file").file-attach-fake-control
+      svg(width="24" height="24")
+        use(xlink:href="./assets/sprite.svg#icon-attach")
+      span Прикрепить документ
+    input(type="file" id="user_file" name="Файл")
+
+  .offer-form__field
+    label(for="user_text") Ваш комментарий
+    textarea(id="user_text")
+
+  .offer-form__footer
+    button(type="submit").lw-main-btn Рассчитать стоимость
+    small Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.

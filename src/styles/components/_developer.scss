@@ -1,0 +1,16 @@
+.developer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+
+  color: var(--dark);
+
+  img {
+    max-width: 200px;
+  }
+
+  span {
+    text-wrap: nowrap;
+  }
+}

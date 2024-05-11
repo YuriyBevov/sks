@@ -1,0 +1,41 @@
+include ../mixins/modal-form
+
+.modal.main-modal#callback
+  .modal__overlay
+    .modal__content
+      .modal__header
+        button(type="button" aria-label="Закрыть").modal-closer
+          svg(width="18" height="18")
+            use(xlink:href="./assets/sprite.svg#icon-close")
+
+        span.lw-section-title Заполните форму и мы обязательно свяжемся с вами</span>
+
+      .modal__body
+        +modal-form({
+          buttonText: 'Заказать звонок',
+          formName: 'Заказ звонка',
+
+          fields: [
+            {
+              type: 'text',
+              label: 'Имя*',
+              required: true,
+              id: 'callback_user_name',
+              name: 'Имя'
+            },
+            {
+              type: 'tel',
+              label: 'Телефон*',
+              required: true,
+              id: 'callback_user_phone',
+              name: 'Телефон'
+            },
+            {
+              type: 'textarea',
+              label: 'Комментарий',
+              required: false,
+              id: 'callback_text',
+              name: 'Комментарий'
+            },
+          ]
+        })

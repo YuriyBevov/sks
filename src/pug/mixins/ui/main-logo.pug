@@ -1,0 +1,12 @@
+//- /**
+//-  * cls: String,
+//-  * logoImg: String,
+//-  * logoHeight: String || Number,
+//-  * logoWidth: String || Number,
+//-  * logoAlt: String,
+//-  * href: String || Null,
+//-  */
+
+mixin main-logo(data)
+  a(href= data.href ? data.href : 'index.html' class= data.cls ? data.cls : null)
+    img(loading="lazy" src=`./assets/img/${data.logoPath}` alt= data.logoAlt width= data.logoWidth height= data.logoHeight)

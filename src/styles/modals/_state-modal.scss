@@ -1,0 +1,51 @@
+.state-modal {
+  .modal-closer {
+    position: static;
+    margin-left: auto;
+  }
+
+  &.error-modal {
+    .modal__body svg {
+      fill: var(--danger);
+    }
+
+    .lw-section-title {
+      color: var(--danger);
+    }
+  }
+
+  &.success-modal {
+    .modal__body svg {
+      fill: var(--success);
+    }
+
+    .lw-section-title {
+      color: var(--success);
+    }
+  }
+
+  .modal {
+    &__content {
+      background-image: url("../assets/img/state-modal-bg.png");
+      background-size: cover;
+    }
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+
+      svg {
+        min-width: 48px;
+      }
+
+      .lw-section-title {
+        font-size: 18px;
+      }
+    }
+  }
+}

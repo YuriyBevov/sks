@@ -1,0 +1,48 @@
+/* Базовые подключения */
+@import "vendor";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "global";
+@import "extends";
+@import "common";
+
+@import "./layout/header";
+
+/* Компоненты */
+
+// @import "./components/burger";
+// @import "./components/nav";
+// @import "./components/feature-card";
+// @import "./components/workflow-card";
+// @import "./components/review-card";
+// @import "./components/loader";
+// @import "./components/main-slider";
+// @import "./components/developer";
+
+// @import "./components/webp-bg";
+
+// @import "./components/offer-form";
+
+// @import "./components/law-info";
+// /* Компоненты конец*/
+
+// /* Секции */
+// @import "./views/index-page/hero";
+// @import "./views/index-page/features";
+// @import "./views/index-page/about";
+// @import "./views/index-page/workflow";
+// @import "./views/index-page/portfolio";
+// @import "./views/index-page/licenses";
+// @import "./views/index-page/offer";
+// @import "./views/index-page/contacts";
+
+// /* Секции конец*/
+
+@import "./layout/footer";
+
+/* Модальные окна */
+@import "./modals/modal";
+@import "./modals/main-modal";
+@import "./modals/state-modal";
+@import "./modals/law-modal";

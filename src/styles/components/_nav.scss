@@ -1,0 +1,66 @@
+.nav {
+  @extend .flex-column;
+  width: 100%;
+
+  &__header {
+    display: none;
+    align-items: center;
+    gap: var(--main-offset);
+    padding: 24px 20px;
+  }
+
+  &-closer {
+    @extend .flex-centered-content;
+    @extend .lw-main-btn;
+    padding: 8px;
+  }
+
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+  }
+
+  &__list-item {
+    a {
+      display: flex;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 5px 10px;
+      color: var(--white);
+
+      @extend .hover-accent;
+    }
+    &--confidentiality {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: none;
+  }
+
+  &__info {
+    @extend .flex-column;
+    padding: 20px;
+    margin-top: auto;
+
+    .company-phone {
+      display: flex;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .company-worktime {
+      @extend .flex-column;
+      span {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        color: var(--primary);
+      }
+    }
+  }
+}

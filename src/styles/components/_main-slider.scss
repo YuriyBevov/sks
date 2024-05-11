@@ -1,0 +1,82 @@
+.main-slider {
+  &-slide {
+    @extend .flex-column;
+    height: auto;
+    width: 100%;
+
+    @include m-b-mobile-lg-down {
+      max-width: 240px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+      object-position: left;
+      // aspect-ratio: 1 / 1;
+    }
+  }
+
+  &-controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &-pagination {
+    @extend .flex-centered-content;
+    margin: 0 40px;
+  }
+
+  &-navigation {
+    @extend .flex-centered-content;
+    gap: clamp(10px, 2.2vw, 20px);
+
+    .main-slider-button-next,
+    .main-slider-button-prev {
+      position: static;
+      @extend .flex-centered-content;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: clamp(40px, 3.8vw, 60px);
+      height: clamp(40px, 3.8vw, 60px);
+      border-radius: 50%;
+
+      svg {
+        width: clamp(16px, 2vw, 28px);
+        height: clamp(16px, 2vw, 28px);
+        fill: var(--primary);
+      }
+
+      border: 1px solid var(--primary);
+      transition: opacity var(--fast-transition), border var(--main-transition),
+        background-color var(--main-transition);
+
+      &:not(.swiper-button-disabled) {
+        cursor: pointer;
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0.5;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--accent);
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    .main-slider-button-prev {
+      transform: rotate(180deg);
+    }
+  }
+}

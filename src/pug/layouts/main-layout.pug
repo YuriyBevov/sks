@@ -1,0 +1,25 @@
+include ./head
+
+doctype html
+
+block variables
+  -
+    const title = ""
+    const desc = ""
+    const keywords = ""
+
+html(lang="ru")
+  +head(title, desc, keywords)
+
+  body
+    include ../components/loader
+    include ./main-header
+
+    main
+      block content
+
+    include ./main-footer
+
+    block modals
+
+    //- script(async src="https://api-maps.yandex.ru/2.1/?apikey=4aa8fccd-d097-4486-835a-704db2b05b2e&lang=ru_RU")

@@ -1,0 +1,32 @@
+nav.nav
+  .nav__header
+    include ../includes/company-logo
+    button(type="button" aria-label="Закрыть меню").nav-closer
+      svg(width="20" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-close")
+  ul.nav__list
+    li.nav__list-item
+      a(href="#features").anchor-link Наши преимущества
+    li.nav__list-item
+      a(href="#about").anchor-link Область применения
+    li.nav__list-item
+      a(href="#workflow").anchor-link Этапы работы
+    li.nav__list-item
+      a(href="#portfolio").anchor-link Примеры работ
+    li.nav__list-item
+      a(href="#licenses").anchor-link Лицензии и Сертификаты
+    li.nav__list-item
+      a(href="#reviews").anchor-link Что о нас говорят наши клиенты
+    li.nav__list-item
+      a(href="#contacts").anchor-link Контакты
+    li.nav__list-item.nav__list-item--confidentiality
+      a(href="#" data-modal-anchor="law").anchor-link Политика конфиденциальности
+
+  .nav__info
+    include ../includes/company-phone
+    include ../includes/company-worktime
+
+
+
+
+
