@@ -1,2 +1,13 @@
+include ../../mixins/tpl-parts/main-title
+
 section.hero
-  p Hero
+  .lw-container
+    +main-title({
+      titleTag: 'h1',
+      title: 'Спецкомплектсервис',
+      textTag: 'p',
+      text: 'Демпферы и комплектующие для железнодорожной техники'
+    })
+
+    include ../../components/features
+

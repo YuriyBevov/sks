@@ -1,25 +1,23 @@
-include ../mixins/ui/main-logo
+include ../mixins/tpl-parts/main-logo
+include ../mixins/ui/main-btn
 
 header.header
   .lw-container.header__container
     +main-logo({
-      cls: '',
-      logoImg: '',
-      logoHeight: '',
-      logoWidth: '',
-      logoAlt: '',
-      href: '',
+      logoPath: 'icon-logo.svg',
+      logoHeight: 60,
+      logoWidth: 320,
+      logoAlt: '«Спецкоплектсервис»',
     })
 
     .header__nav
       include ../components/nav
-    .header__phone
-      include ../includes/company-phone
 
-    button(type="button" aria-label="Заказать обратный звонок" data-modal-anchor="callback").lw-main-btn.header__callback-btn.js-callback-modal-opener
-      svg(width="20" height="20")
-        use(xlink:href="./assets/sprite.svg#icon-phone")
-      span Заказать звонок
+    +main-btn({
+      cls: 'header__order-btn',
+      title: 'Заказать звонок',
+      modal: 'offer'
+    })
 
     include ../components/burger
 

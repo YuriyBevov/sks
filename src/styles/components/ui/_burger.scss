@@ -2,10 +2,10 @@
   @extend .btn-reset;
   @extend .flex-centered-content;
   margin-left: 10px;
-  background-color: var(--primary);
+  background-color: transparent;
   border-radius: 10px;
   padding: 8px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 
   transition: opacity var(--fast-transition), color var(--main-transition),
     border-color var(--main-transition), background-color var(--main-transition);

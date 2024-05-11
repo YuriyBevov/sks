@@ -1,0 +1,6 @@
+mixin company-rights-text(data)
+  span(class= data.cls ? data.cls : null)
+    != data.text
+    if data.year
+      span.js-current-year &nbsp;2024
+      != data.yearText

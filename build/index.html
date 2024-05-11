@@ -10,52 +10,86 @@
   </head>
   <body>
     <div class="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
-    <header class="header">
-      <div class="lw-container header__container"><a href="index.html"><img loading="lazy" src="./assets/img/undefined" alt="" width="" height=""></a>
-        <div class="header__nav">
-          <nav class="nav">
-            <div class="nav__header"><a class="company-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
-              <button class="nav-closer" type="button" aria-label="Закрыть меню">
-                <svg width="20" height="20">
-                  <use xlink:href="./assets/sprite.svg#icon-close"></use>
-                </svg>
-              </button>
-            </div>
-            <ul class="nav__list">
-              <li class="nav__list-item"><a class="anchor-link" href="#features">Наши преимущества</a></li>
-              <li class="nav__list-item"><a class="anchor-link" href="#about">Область применения</a></li>
-              <li class="nav__list-item"><a class="anchor-link" href="#workflow">Этапы работы</a></li>
-              <li class="nav__list-item"><a class="anchor-link" href="#portfolio">Примеры работ</a></li>
-              <li class="nav__list-item"><a class="anchor-link" href="#licenses">Лицензии и Сертификаты</a></li>
-              <li class="nav__list-item"><a class="anchor-link" href="#reviews">Что о нас говорят наши клиенты</a></li>
-              <li class="nav__list-item"><a class="anchor-link" href="#contacts">Контакты</a></li>
-              <li class="nav__list-item nav__list-item--confidentiality"><a class="anchor-link" href="#" data-modal-anchor="law">Политика конфиденциальности</a></li>
-            </ul>
-            <div class="nav__info"><a class="company-phone" href="tel:+78121234567" aria-label="Позвонить">+7 (812) 123-45-67</a>
-              <div class="company-worktime"><span>Пн - Чт: 9:00 - 18:00</span><span>Пт: 9:00 - 17:00</span><span>Сб - Вс: Выходной</span></div>
-            </div>
-          </nav>
-        </div>
-        <div class="header__phone"><a class="company-phone" href="tel:+78121234567" aria-label="Позвонить">+7 (812) 123-45-67</a></div>
-        <button class="lw-main-btn header__callback-btn js-callback-modal-opener" type="button" aria-label="Заказать обратный звонок" data-modal-anchor="callback">
-          <svg width="20" height="20">
-            <use xlink:href="./assets/sprite.svg#icon-phone"></use>
-          </svg><span>Заказать звонок</span>
-        </button>
-        <button class="burger" type="button" aria-label="Открыть меню">
-          <svg width="20" height="20">
-            <use xlink:href="./assets/sprite.svg#icon-burger"></use>
-          </svg>
-        </button>
-      </div>
-    </header>
     <main>
       <section class="hero">
-        <p>Hero</p>
+        <div class="lw-container">
+                <h1 class="lw-main-title">Спецкомплектсервис</h1>
+                <p class="lw-main-text">Демпферы и комплектующие для железнодорожной техники</p>
+          <ul class="features">
+            <li class="features__item">
+                        <div class="info-card"><span>Эксклюзивный представитель завода БААЗ в России с 2017 года</span></div>
+            </li>
+            <li class="features__item">
+                        <div class="info-card"><span>Патенты на всю поставляемую продукцию</span></div>
+            </li>
+            <li class="features__item">
+                        <div class="info-card"><span>Собственное конструкторское бюро и сертифицированная лаборатория</span></div>
+            </li>
+            <li class="features__item">
+                        <div class="info-card"><span>Соответствие требованиям Центра технического аудита РЖД</span></div>
+            </li>
+          </ul>
+        </div>
       </section>
+            <section class="main-section">
+              <div class="lw-container main-section__container">
+                <div class="main-section__content-part">
+                        <h2 class="lw-section-title">Продукция</h2>
+                  <p class="lw-base-text">Спецкомплектсервис является эксклюзивным поставщиком демпферов и комплектующих для железнодорожного транспорта, выпускаемых заводом БААЗ. Все поставляемые детали проходят сертификацию и имеет гарантию завода-изготовителя.</p>
+                  <p class="lw-base-text">Мы предоставляем продукцию из каталога завода, а также оказываем услуги разработки и производим детали на заказ. Для этой цели мы привлекаем специалистов собственного конструкторского бюро и проводим испытания в сертифицированной лаборатории.</p>
+                  <p class="lw-base-text">Для получения более подробной информации о нашей продукции, сроках и условиях поставок, пожалуйста, оставьте заявку.</p>
+                        <button class="lw-main-btn" data-modal-anchor="offer">Заказать каталог</button>
+                </div>
+                <div class="main-section__content-part">
+                  <div class="lw-pattern-container lw-pattern-container--ltr">
+                    <div class="lw-pattern-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/products-img@1x.webp 1x, ./assets/img/products-img@2x.webp 2x"><img src="./assets/img/products-img.jpg" srcset="./assets/img/products-img@2x.jpg 2x" alt="Изображение производства" width="100%" height="100%">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="main-section">
+              <div class="lw-container main-section__container main-section__container--rtl">
+                <div class="main-section__content-part">
+                        <h2 class="lw-section-title">Заказчикам</h2>
+                  <p class="lw-base-text">Спецкомплектсервис является держателем товарного знака завода БААЗ на территории России и владеет патентами на поставляемую продукцию.</p>
+                  <p class="lw-base-text">Соблюдение производственных стандартов и высокое качество комплектующих ежегодно подтверждается Центром технического аудита ОАО «РЖД» (ЦТА РЖД).</p>
+                  <p class="lw-base-text">Проведение процедур валидации первого изделия (First article inspection - FAI), контроля производственного  процесса и проверки качества продукции.</p>
+                  <p class="lw-base-text">Для получения более подробной информации об ассортименте, сроках и условиях поставок, пожалуйста, оставьте заявку.</p>
+                        <button class="lw-main-btn" data-modal-anchor="offer">Заказать каталог</button>
+                </div>
+                <div class="main-section__content-part">
+                  <div class="lw-pattern-container lw-pattern-container--rtl">
+                    <div class="lw-pattern-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/clients-img@1x.webp 1x, ./assets/img/clients-img@2x.webp 2x"><img src="./assets/img/clients-img.jpg" srcset="./assets/img/clients-img@2x.jpg 2x" alt="Изображение производства" width="100%" height="100%">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
     </main>
     <footer class="footer">
-      <div class="lw-container footer__container"></div>
+      <div class="lw-container">
+        <div class="footer__section"><a class="lw-main-logo" href="index.html" aria-label="Спецкоплектсервис"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="Спецкоплектсервис" width="320" height="60"></a>
+          <div class="footer__contacts"><a class="lw-main-link" href="tel:+79160764550">
+                  <svg width="32" height="32">
+                    <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+                  </svg><span>+7 916 076 4550</span></a><a class="lw-main-link" href="mailto:zakaz@sks.msk.ru">
+                  <svg width="38" height="24">
+                    <use xlink:href="./assets/sprite.svg#icon-mail"></use>
+                  </svg><span>zakaz@sks.msk.ru</span></a>
+          </div>
+              <button class="lw-main-btn footer__order-btn" data-modal-anchor="offer">Оставить заявку</button>
+        </div>
+        <div class="footer__section"></div>
+        <div class="footer__section"><span class="lw-base-text company-rights">Copyright © ООО «Спецкоплектсервис»,<span class="js-current-year">&nbsp;2024</span>год</span><a class="developer" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ" target="_blank"><span class="lw-base-text">Создано в</span><img loading="lazy" src="./assets/img/icon-developer.svg" width="280" height="40" alt="LittleWeb.ru - создание сайтов под ключ"></a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

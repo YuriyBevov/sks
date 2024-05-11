@@ -11,16 +11,18 @@
 
 /* Компоненты */
 
-// @import "./components/burger";
-// @import "./components/nav";
-// @import "./components/feature-card";
+@import "./components/nav";
+@import "./components/features";
+@import "./components/info-card";
 // @import "./components/workflow-card";
 // @import "./components/review-card";
 // @import "./components/loader";
 // @import "./components/main-slider";
-// @import "./components/developer";
-
-// @import "./components/webp-bg";
+@import "./components/developer";
+@import "./components/ui/burger";
+@import "./components/ui/lw-main-btn";
+@import "./components/ui/lw-main-link";
+@import "./components/ui/webp-bg";
 
 // @import "./components/offer-form";
 
@@ -28,14 +30,8 @@
 // /* Компоненты конец*/
 
 // /* Секции */
-// @import "./views/index-page/hero";
-// @import "./views/index-page/features";
-// @import "./views/index-page/about";
-// @import "./views/index-page/workflow";
-// @import "./views/index-page/portfolio";
-// @import "./views/index-page/licenses";
-// @import "./views/index-page/offer";
-// @import "./views/index-page/contacts";
+@import "./views/index-page/hero";
+@import "./views/index-page/main-section";
 
 // /* Секции конец*/
 

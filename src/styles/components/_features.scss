@@ -1,0 +1,19 @@
+.features {
+  @extend .list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @include m-b-desktop-down {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m-b-down(640px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    height: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+:root {
+  --lw-main-link-padding: initial;
+  --lw-main-link-font-size: clamp(14px, 1.8vw, 18px);
+  --lw-main-link-font-weight: 600;
+
+  --lw-main-link-width: fit-content;
+  --lw-main-link-max-width: 100%;
+  --lw-main-link-min-height: fit-content;
+
+  --lw-main-link-color: var(--white);
+  --lw-main-link-bg-color: initial;
+
+  --lw-main-link-border: initial;
+  --lw-main-link-borde-radius: initial;
+
+  --lw-main-link-svg-fill-color: var(--warning);
+
+  --lw-main-link-border-hover-color: transparent;
+  --lw-main-link-hover-color: var(--white);
+  --lw-main-link-hover-bg-color: transparent;
+  --lw-main-link-hover-opacity: 0.6;
+  --lw-main-link-hover-svg-fill-color: var(--white);
+  --lw-main-link-active-opacity: 0.6;
+  --lw-main-link-transition: var(--main-transition);
+}
+
+.lw-main-link {
+  @extend .flex-centered-content;
+
+  width: var(--lw-main-link-width);
+  max-width: var(--lw-main-link-max-width);
+  min-height: var(--lw-main-link-min-height);
+
+  font-weight: var(--lw-main-link-font-weight);
+  font-size: var(--lw-main-link-font-size);
+  border: var(--lw-main-link-border);
+  border-radius: var(--lw-main-link-borde-radius);
+  color: var(--lw-main-link-color);
+  background-color: var(--lw-main-link-bg-color);
+
+  svg {
+    fill: var(--lw-main-link-svg-fill-color);
+    margin: 0 10px;
+
+    width: clamp(20px, 3vw, 32px);
+    width: clamp(20px, 3vw, 32px);
+
+    transition: fill var(--lw-main-link-transition);
+  }
+
+  transition: opacity var(--lw-main-link-transition),
+    color var(--lw-main-link-transition),
+    border-color var(--lw-main-link-transition),
+    background-color var(--lw-main-link-transition);
+
+  &:hover,
+  &:focus {
+    opacity: var(--lw-main-link-hover-opacity);
+    color: var(--lw-main-link-hover-color);
+    border-color: var(--lw-main-link-border-hover-color);
+    background-color: var(--lw-main-link-hover-bg-color);
+
+    svg {
+      fill: var(--lw-main-link-hover-svg-fill-color);
+    }
+  }
+
+  &:active {
+    opacity: var(--lw-main-link-active-opacity);
+  }
+}

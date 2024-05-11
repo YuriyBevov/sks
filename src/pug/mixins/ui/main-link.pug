@@ -1,0 +1,16 @@
+mixin main-link(data)
+  a(href= data.href class= data.cls ? data.cls : null).lw-main-link
+    if data.iconBefore
+      if data.iconBeforeType == 'svg'
+        svg(width= data.iconBeforeWidth height= data.iconBeforeHeight)
+          use(xlink:href=`./assets/sprite.svg#icon-${data.iconBeforeName}`)
+      if data.iconBeforeType == 'img'
+        img(src=`./assets/img/${data.iconBeforeName}.${data.iconBeforeFileType}` alt= data.iconBeforeAlt width= data.iconBeforeWidth height= data.iconBeforeHeight)
+    span!= data.text
+
+    if data.iconAfter
+      if data.iconAfterType == 'svg'
+        svg(width= data.iconAfterWidth height= data.iconAfterHeight)
+          use(xlink:href=`./assets/sprite.svg#icon-${data.iconAfterName}`)
+      if data.iconAfterType == 'img'
+        img(src=`./assets/img/${data.iconAfterName}${data.iconAfterFileType}` alt= data.iconAfterAlt width= data.iconAfterWidth height= data.iconAfterHeight)

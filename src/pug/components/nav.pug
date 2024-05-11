@@ -1,30 +1,46 @@
+include ../mixins/tpl-parts/main-logo
+include ../mixins/ui/main-link
 nav.nav
   .nav__header
-    include ../includes/company-logo
-    button(type="button" aria-label="Закрыть меню").nav-closer
+    +main-logo({
+      logoPath: 'icon-logo.svg',
+      logoHeight: 60,
+      logoWidth: 320,
+      logoAlt: '«Спецкоплектсервис»',
+    })
+
+    button(type="button" aria-label="Закрыть меню").lw-main-btn.nav-closer
       svg(width="20" height="20")
         use(xlink:href="./assets/sprite.svg#icon-close")
+
   ul.nav__list
     li.nav__list-item
-      a(href="#features").anchor-link Наши преимущества
+      a(href="#about").anchor-link О нас
     li.nav__list-item
-      a(href="#about").anchor-link Область применения
+      a(href="#products").anchor-link Продукция
     li.nav__list-item
-      a(href="#workflow").anchor-link Этапы работы
-    li.nav__list-item
-      a(href="#portfolio").anchor-link Примеры работ
-    li.nav__list-item
-      a(href="#licenses").anchor-link Лицензии и Сертификаты
-    li.nav__list-item
-      a(href="#reviews").anchor-link Что о нас говорят наши клиенты
-    li.nav__list-item
-      a(href="#contacts").anchor-link Контакты
-    li.nav__list-item.nav__list-item--confidentiality
-      a(href="#" data-modal-anchor="law").anchor-link Политика конфиденциальности
+      a(href="#clients").anchor-link Заказчикам
 
   .nav__info
-    include ../includes/company-phone
-    include ../includes/company-worktime
+    +main-link({
+      text: '+7 916 076 4550',
+      href: 'tel:+79160764550',
+      iconBefore: true,
+      iconBeforeType: 'svg',
+      iconBeforeWidth: 32,
+      iconBeforeHeight: 32,
+      iconBeforeName: 'phone',
+    })
+
+    +main-link({
+      text: 'zakaz@sks.msk.ru',
+      href: 'mailto:zakaz@sks.msk.ru',
+      iconBefore: true,
+      iconBeforeType: 'svg',
+      iconBeforeWidth: 38,
+      iconBeforeHeight: 24,
+      iconBeforeName: 'mail',
+    })
 
 
 

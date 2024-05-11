@@ -1,0 +1,54 @@
+:root {
+  --lw-main-btn-padding: 12px clamp(16px, 1.6vw, 24px) 12px;
+  --lw-main-btn-font-size: clamp(14px, 1.8vw, 18px);
+  --lw-main-btn-font-weight: 600;
+
+  --lw-main-btn-width: 100%;
+  --lw-main-btn-max-width: 220px;
+  --lw-main-btn-min-height: 40px;
+
+  --lw-main-btn-color: var(--primary);
+  --lw-main-btn-bg-color: var(--warning);
+
+  --lw-main-btn-border: 1px solid transparent;
+  --lw-main-btn-borde-radius: 5px;
+
+  --lw-main-btn-border-hover-color: var(--warning);
+  --lw-main-btn-hover-color: var(--warning);
+  --lw-main-btn-hover-bg-color: transparent;
+
+  --lw-main-btn-active-opacity: 0.6;
+
+  --lw-main-btn-transition: var(--main-transition);
+}
+
+.lw-main-btn {
+  @extend .btn-reset;
+  @extend .flex-centered-content;
+  width: var(--lw-main-btn-width);
+  max-width: var(--lw-main-btn-max-width);
+  min-height: var(--lw-main-btn-min-height);
+  padding: var(--lw-main-btn-padding);
+  font-weight: var(--lw-main-btn-font-weight);
+  font-size: var(--lw-main-btn-font-size);
+  border: var(--lw-main-btn-border);
+  border-radius: var(--lw-main-btn-borde-radius);
+  color: var(--lw-main-btn-color);
+  background-color: var(--lw-main-btn-bg-color);
+
+  transition: opacity var(--lw-main-btn-transition),
+    color var(--lw-main-btn-transition),
+    border-color var(--lw-main-btn-transition),
+    background-color var(--lw-main-btn-transition);
+
+  &:hover,
+  &:focus {
+    color: var(--lw-main-btn-hover-color);
+    border-color: var(--lw-main-btn-border-hover-color);
+    background-color: var(--lw-main-btn-hover-bg-color);
+  }
+
+  &:active {
+    opacity: var(--lw-main-btn-active-opacity);
+  }
+}

@@ -1,9 +1,10 @@
 .header {
-  position: absolute;
+  padding: 10px 0;
+  background: rgba(0, 66, 116, 0.6);
+
+  position: fixed;
   top: 0;
   width: 100%;
-  padding: clamp(24px, 2.6vw, 40px) 0;
-  background-color: transparent;
   z-index: 5;
 
   &__container {
@@ -11,27 +12,24 @@
     align-items: center;
   }
 
-  .company-logo {
-    display: flex;
+  .lw-main-logo {
     margin-right: auto;
-
-    @include m-b-down(1280px) {
-      width: 160px;
-      height: auto;
-    }
   }
 
   &__nav {
     @extend .flex-centered-content;
 
-    @include m-b-tablet-up {
-      opacity: 0 !important;
-      display: none !important;
+    @include m-b-tablet-lg-up {
+      opacity: 1 !important;
+      display: flex !important;
     }
 
     .nav {
-      @include m-b-tablet-up {
+      @include m-b-tablet-lg-up {
         transform: none !important;
+      }
+
+      @include m-b-tablet-lg-down {
       }
 
       @include m-b-down(1280px) {
@@ -39,7 +37,7 @@
       }
     }
 
-    @include m-b-tablet-down {
+    @include m-b-tablet-lg-down {
       display: none;
       margin: 0;
       border-top: 0;
@@ -65,7 +63,7 @@
           width: 100dvw;
           height: 100%;
           max-width: 360px;
-          background-color: var(--white);
+          background-color: var(--primary);
           overflow: hidden;
           overflow-y: auto;
 
@@ -75,6 +73,12 @@
 
           &-closer {
             display: flex;
+            max-width: fit-content;
+            background-color: transparent;
+
+            svg {
+              fill: var(--white);
+            }
           }
 
           &__list {
@@ -97,7 +101,7 @@
                 font-size: 18px;
                 text-transform: uppercase;
                 padding-left: 0;
-                color: var(--primary);
+                color: var(--white);
 
                 &:hover {
                   color: var(--warning);
@@ -118,45 +122,10 @@
     }
   }
 
-  &__phone {
-    margin-right: 50px;
-
-    a {
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--primary);
-
-      @extend .hover-opacity;
-    }
-
-    @include m-b-down(575px) {
-      display: none;
-    }
-  }
-
-  &__callback-btn {
-    @include m-b-tablet-up {
-      svg {
-        display: none;
-      }
-    }
-
-    @include m-b-tablet-down {
-      padding: 8px;
-      span {
-        display: none;
-      }
-
-      svg {
-        fill: var(--white);
-      }
-    }
-  }
-
   .burger {
     display: none;
 
-    @include m-b-tablet-down {
+    @include m-b-tablet-lg-down {
       display: flex;
     }
   }

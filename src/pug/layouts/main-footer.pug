@@ -1,2 +1,64 @@
+include ../mixins/tpl-parts/main-logo
+include ../mixins/tpl-parts/company-rights-text
+include ../mixins/tpl-parts/developer
+include ../mixins/ui/main-link
+include ../mixins/ui/main-btn
+
 footer.footer
-  .lw-container.footer__container
+  .lw-container
+    .footer__section
+      +main-logo({
+        logoPath: 'icon-logo.svg',
+        logoHeight: 60,
+        logoWidth: 320,
+        logoAlt: 'Спецкоплектсервис',
+        label: 'Спецкоплектсервис'
+      })
+
+      .footer__contacts
+        +main-link({
+          text: '+7 916 076 4550',
+          href: 'tel:+79160764550',
+          iconBefore: true,
+          iconBeforeType: 'svg',
+          iconBeforeWidth: 32,
+          iconBeforeHeight: 32,
+          iconBeforeName: 'phone',
+        })
+
+        +main-link({
+          text: 'zakaz@sks.msk.ru',
+          href: 'mailto:zakaz@sks.msk.ru',
+          iconBefore: true,
+          iconBeforeType: 'svg',
+          iconBeforeWidth: 38,
+          iconBeforeHeight: 24,
+          iconBeforeName: 'mail',
+        })
+
+      +main-btn({
+        cls: 'footer__order-btn',
+        title: 'Оставить заявку',
+        modal: 'offer'
+      })
+
+    .footer__section
+      //- include ../components/nav
+
+    .footer__section
+      +company-rights-text({
+        cls: 'lw-base-text company-rights',
+        text: 'Copyright © ООО «Спецкоплектсервис»,',
+        year: true,
+        yearText: 'год',
+      })
+
+      +developer({
+        href: 'https://littleweb.ru/',
+        label: 'LittleWeb.ru - создание сайтов под ключ',
+        text: 'Создано в',
+        iconName: 'icon-developer',
+        iconWidth: '280',
+        iconHeight: '40',
+        iconAlt: 'LittleWeb.ru - создание сайтов под ключ'
+      })

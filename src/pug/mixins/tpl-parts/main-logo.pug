@@ -1,6 +1,6 @@
 //- /**
 //-  * cls: String,
-//-  * logoImg: String,
+//-  * logoPath: String,
 //-  * logoHeight: String || Number,
 //-  * logoWidth: String || Number,
 //-  * logoAlt: String,
@@ -8,5 +8,5 @@
 //-  */
 
 mixin main-logo(data)
-  a(href= data.href ? data.href : 'index.html' class= data.cls ? data.cls : null)
+  a(href= data.href ? data.href : 'index.html' class= data.cls ? data.cls : null aria-label= data.label ? data.label : null).lw-main-logo
     img(loading="lazy" src=`./assets/img/${data.logoPath}` alt= data.logoAlt width= data.logoWidth height= data.logoHeight)

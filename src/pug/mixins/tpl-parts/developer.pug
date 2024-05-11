@@ -1,0 +1,5 @@
+mixin developer(data)
+  a(href= data.href rel="noopener nofollow norefferer" aria-label= data.label target="_blank" class= data.cls ? data.cls : null).developer
+    if data.text
+      span.lw-base-text(class= data.textCls ? data.textCls : null)!= data.text
+    img(loading="lazy" src=`./assets/img/${data.iconName}.svg` width= data.iconWidth height= data.iconHeight alt= data.iconAlt)

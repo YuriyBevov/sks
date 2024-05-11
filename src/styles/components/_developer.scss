@@ -1,10 +1,9 @@
 .developer {
-  display: flex;
-  flex-wrap: wrap;
+  @extend .flex-column;
   align-items: baseline;
   gap: 5px;
 
-  color: var(--dark);
+  color: var(--main-text-color);
 
   img {
     max-width: 200px;
@@ -12,5 +11,6 @@
 
   span {
     text-wrap: nowrap;
+    font-size: 14px;
   }
 }

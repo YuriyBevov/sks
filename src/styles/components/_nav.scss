@@ -43,24 +43,5 @@
     @extend .flex-column;
     padding: 20px;
     margin-top: auto;
-
-    .company-phone {
-      display: flex;
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-
-    .company-worktime {
-      @extend .flex-column;
-      span {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 400;
-        margin-bottom: 5px;
-        color: var(--primary);
-      }
-    }
   }
 }
