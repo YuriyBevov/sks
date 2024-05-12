@@ -1,0 +1,50 @@
+.lw-main-input {
+  width: 100%;
+  padding: 8px 16px;
+  min-height: 36px;
+  font-size: 16px;
+  border: 1px solid #7cabce;
+  border-radius: 3px;
+  color: var(--text-color);
+
+  @extend .lw-text-overflow;
+
+  &::placeholder {
+    font-size: 14px;
+    color: var(--text-color);
+  }
+
+  &.invalid {
+    border-color: var(--error);
+  }
+
+  &.shaker {
+    animation: shaker 0.7s ease-in;
+
+    @keyframes shaker {
+      0% {
+        transform: translateX(0);
+      }
+
+      20% {
+        transform: translateX(5px);
+      }
+
+      40% {
+        transform: translateX(-5px);
+      }
+
+      60% {
+        transform: translateX(5px);
+      }
+
+      80% {
+        transform: translateX(-5px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+}

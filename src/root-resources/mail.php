@@ -33,16 +33,16 @@ try {
   //$mail->SMTPDebug = 2;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = ''; // Логин на почте
-  $mail->Password   = ''; // Пароль на почте
+  $mail->Host       = 'smtp.timeweb.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'zakaz@sks-msk.ru'; // Логин на почте
+  $mail->Password   = 'pass'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
   $mail->setFrom('', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('');
+  $mail->addAddress('yuriybevov@gmail.ru', 'zakaz@sks-msk.ru' );
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {

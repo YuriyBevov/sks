@@ -1,0 +1,98 @@
+.offer-form {
+  width: 100%;
+
+  @extend .flex-column;
+  gap: 20px;
+
+  &__section {
+    &--main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 20px;
+
+      @include m-b-mobile-lg-down {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  label {
+    @extend .lw-base-text;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary);
+  }
+
+  &__control {
+    @extend .flex-column;
+    gap: 5px;
+
+    textarea {
+      font-size: 14px;
+      resize: none;
+      height: 100px;
+      border: 1px solid #7cabce;
+      border-radius: 3px;
+      padding: 10px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__footer {
+    small {
+      display: inline-block;
+      margin-bottom: 10px;
+      .lw-main-link {
+        display: inline;
+        color: var(--primary);
+        font-size: inherit;
+        padding: 0;
+        text-decoration: underline;
+      }
+    }
+
+    @include m-b-tablet-down {
+      .lw-main-btn {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.lw-main-radio {
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label::before {
+      box-shadow: 0 0 0 3px var(--white) inset;
+      background-color: var(--primary);
+    }
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 16px;
+      height: 16px;
+      content: "";
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 0 2px var(--white) inset;
+      background-color: var(--white);
+    }
+  }
+}

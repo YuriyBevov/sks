@@ -7,8 +7,10 @@
 @import "extends";
 @import "common";
 
+@import "./components/ui/loader";
 @import "./components/ui/lw-main-btn";
 @import "./components/ui/lw-main-link";
+@import "./components/ui/lw-main-input";
 
 @import "./components/ui/burger";
 @import "./components/ui/webp-bg";
@@ -22,11 +24,11 @@
 @import "./components/info-card";
 // @import "./components/workflow-card";
 // @import "./components/review-card";
-// @import "./components/loader";
+
 // @import "./components/main-slider";
 @import "./components/developer";
 
-// @import "./components/offer-form";
+@import "./components/offer-form";
 
 // @import "./components/law-info";
 // /* Компоненты конец*/

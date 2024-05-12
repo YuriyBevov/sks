@@ -2,7 +2,7 @@ include ./section-title
 include ../ui/main-btn
 
 mixin main-section(data)
-  section.main-section(class= data.sectionCls ? sectionCls : null)
+  section.main-section(id= data.sectionID ? data.sectionID : null class= data.sectionCls ? data.sectionCls : null data-speed= data.sectionSpeed ? data.sectionSpeed : null)
     .lw-container.main-section__container(class= data.rtl ? 'main-section__container--rtl' : null)
       .main-section__content-part
         +section-title({

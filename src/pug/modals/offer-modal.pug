@@ -1,6 +1,6 @@
-include ../mixins/modal-form
+include ../mixins/ui/main-input
 
-.modal.main-modal#callback
+.modal.main-modal#offer
   .modal__overlay
     .modal__content
       .modal__header
@@ -8,34 +8,60 @@ include ../mixins/modal-form
           svg(width="18" height="18")
             use(xlink:href="./assets/sprite.svg#icon-close")
 
-        span.lw-section-title Заполните форму и мы обязательно свяжемся с вами</span>
+        span.lw-section-title Заполните форму и&nbsp;мы обязательно свяжемся&nbsp;с&nbsp;вами</span>
 
       .modal__body
-        +modal-form({
-          buttonText: 'Заказать звонок',
-          formName: 'Заказ звонка',
+        form(action="/mail.php" method="POST" id="offer-form").offer-form
+          input(type="hidden" name="Заполненная форма" value="Заказать звонок")
 
-          fields: [
-            {
-              type: 'text',
-              label: 'Имя*',
-              required: true,
-              id: 'callback_user_name',
-              name: 'Имя'
-            },
-            {
-              type: 'tel',
-              label: 'Телефон*',
-              required: true,
-              id: 'callback_user_phone',
-              name: 'Телефон'
-            },
-            {
-              type: 'textarea',
-              label: 'Комментарий',
-              required: false,
-              id: 'callback_text',
-              name: 'Комментарий'
-            },
-          ]
-        })
+          .offer-form__section.offer-form__section--main
+            .offer-form__control
+              +main-input({
+                type: 'text',
+                label: 'ФИО*',
+                required: true,
+                id: 'user_name',
+                name: 'ФИО'
+              })
+            .offer-form__control
+              +main-input({
+                type: 'text',
+                label: 'Компания',
+                id: 'user_company',
+                name: 'Компания'
+              })
+            .offer-form__control
+              +main-input({
+                type: 'tel',
+                label: 'Телефон*',
+                required: true,
+                id: 'callback_user_phone',
+                name: 'Телефон'
+              })
+            .offer-form__control
+              +main-input({
+                type: 'text',
+                label: 'E-mail',
+                id: 'callback_user_email',
+                name: 'E-mail'
+              })
+
+          .offer-form__section
+            label(for="user_need_cat") Требуются изделия:
+            .offer-form__control
+              .lw-main-radio
+                input(type="radio" id="user_need_cat" name="Требуются изделия" checked)
+                label(for="user_need_cat") По каталогу
+            .offer-form__control
+              .lw-main-radio
+                input(type="radio" id="user_offer" name="Требуются изделия")
+                label(for="user_offer") На заказ
+
+          .offer-form__section
+            .offer-form__control
+              label(for="user_text") Поле для текстового комментария
+              textarea(id="user_text" placeholder="Введите ваш комментарий" name="Комментарий")
+
+          .offer-form__footer
+            small Нажимая на кнопку вы соглашаетесь с&nbsp;<button class="lw-main-link" data-modal-anchor="law">обработкой персональных</button> данных.
+            button(type="submit").lw-main-btn Отправить

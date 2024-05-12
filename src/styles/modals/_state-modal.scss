@@ -25,13 +25,21 @@
   }
 
   .modal {
+    &-closer {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
     &__content {
       background-image: url("../assets/img/state-modal-bg.png");
       background-size: cover;
+
+      max-width: 600px;
+      width: 80vw;
     }
-    &__header {
-      margin-bottom: 20px;
-    }
+    // &__header {
+    //   margin-bottom: 0;
+    // }
 
     &__body {
       display: flex;
@@ -40,7 +48,11 @@
       gap: 20px;
 
       svg {
-        min-width: 48px;
+        min-width: 40px;
+
+        @include m-b-down(475px) {
+          display: none;
+        }
       }
 
       .lw-section-title {

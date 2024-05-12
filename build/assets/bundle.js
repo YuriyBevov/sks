@@ -11864,6 +11864,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
 /* harmony import */ var _vendor_modernizr_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./vendor/modernizr.js */ "./src/scripts/vendor/modernizr.js");
 /* harmony import */ var _vendor_modernizr_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_vendor_modernizr_js__WEBPACK_IMPORTED_MODULE_6__);
+ // import "./modules/page-animation.js";
 
 
 

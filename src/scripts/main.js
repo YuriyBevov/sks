@@ -1,4 +1,5 @@
 import "./modules/page-loading.js";
+// import "./modules/page-animation.js";
 import "./modules/modal-init.js";
 import "./modules/input-number-mask.js";
 import "./modules/form-submit.js";
