@@ -47,11 +47,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.17",
     "gsap": "file:gsap-bonus.tgz",
     "imagesloaded": "^5.0.0",
-    "imask": "^6.6.1",
-    "swiper": "^8.4.5"
+    "imask": "^6.6.1"
   },
   "repository": {
     "type": "git",

@@ -22,10 +22,6 @@ export function sendForm(form) {
     setTimeout(() => {
       new Modal(successModal).show();
     }, 700);
-
-    // if (dataLayer) {
-    //   dataLayer.push({ event: "form-submit-event" });
-    // }
   }
 
   function error() {
@@ -36,7 +32,6 @@ export function sendForm(form) {
   }
 
   // handle the form submission event
-
   const data = new FormData(form);
   ajax(form.method, form.action, data, success, error);
 

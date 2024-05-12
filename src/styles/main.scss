@@ -1,4 +1,3 @@
-/* Базовые подключения */
 @import "vendor";
 @import "vars";
 @import "mixins";
@@ -6,42 +5,21 @@
 @import "global";
 @import "extends";
 @import "common";
-
 @import "./components/ui/loader";
 @import "./components/ui/lw-main-btn";
 @import "./components/ui/lw-main-link";
 @import "./components/ui/lw-main-input";
-
 @import "./components/ui/burger";
 @import "./components/ui/webp-bg";
-
 @import "./layout/header";
-
-/* Компоненты */
-
 @import "./components/nav";
 @import "./components/features";
 @import "./components/info-card";
-// @import "./components/workflow-card";
-// @import "./components/review-card";
-
-// @import "./components/main-slider";
 @import "./components/developer";
-
 @import "./components/offer-form";
-
-// @import "./components/law-info";
-// /* Компоненты конец*/
-
-// /* Секции */
 @import "./views/index-page/hero";
 @import "./views/index-page/main-section";
-
-// /* Секции конец*/
-
 @import "./layout/footer";
-
-/* Модальные окна */
 @import "./modals/modal";
 @import "./modals/main-modal";
 @import "./modals/state-modal";

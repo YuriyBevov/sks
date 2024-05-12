@@ -13,16 +13,10 @@
     var(--content-fluid-width) + (var(--container-offset) * 2)
   );
 
-  // colors
   --white: #ffffff;
   --black: #232323;
-
   --primary: #004274;
   --secondary: #8fa4c0;
-
-  // --light: #f2f7fd;
-  // --gray: #8d8d8d;
-  // --dark: #505050;
   --warning: #fac800;
   --success: #17a52e;
   --danger: #f32f2f;
@@ -34,7 +28,6 @@
   --main-border: 1px solid var(--white);
   --main-text-color: var(--white);
 
-  // scrollbar
   --main-scrollbar-width: 10px;
   --main-scrollbar-color: var(--white);
   --main-scrollbar-thumb-color: var(--primary);

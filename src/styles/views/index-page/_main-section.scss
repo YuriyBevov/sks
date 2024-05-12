@@ -1,8 +1,6 @@
 .main-section {
   @extend .lw-section;
-
   position: relative;
-  background-color: var(--white);
 
   &__container {
     display: flex;
