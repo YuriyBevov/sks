@@ -32,12 +32,12 @@
   &::-webkit-scrollbar {
     background-color: var(--main-scrollbar-color);
     width: var(--main-scrollbar-width);
-    border-radius: 10px;
+    // border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: var(--main-scrollbar-thumb-color);
-    border-radius: 10px;
+    // border-radius: 10px;
   }
 }
 

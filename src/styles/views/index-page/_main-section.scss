@@ -1,18 +1,20 @@
 .main-section {
-  &__container {
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
+  @extend .lw-section;
 
+  &__container {
     display: flex;
     gap: clamp(30px, 4vw, 220px);
 
     &--rtl {
       flex-direction: row-reverse;
     }
+
+    @include m-b-tablet-down {
+      flex-direction: column;
+    }
   }
 
   &__content-part {
-    outline: 1px solid red;
     @extend .flex-column;
     gap: var(--main-offset);
     width: 50%;
@@ -20,6 +22,12 @@
 
     position: sticky;
     top: 20px;
+
+    @include m-b-tablet-down {
+      position: static;
+      top: 0;
+      width: 100%;
+    }
 
     .lw-base-text,
     .lw-section-title {
@@ -29,6 +37,14 @@
 
     .lw-base-text {
       font-family: var(--alt-font-family);
+    }
+
+    .lw-main-btn {
+      &:hover,
+      &:focus {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
     }
 
     img {

@@ -51,10 +51,6 @@ a[href="tel:*"] {
   white-space: nowrap;
 }
 
-section {
-  @extend .lw-section;
-}
-
 address {
   font-style: normal;
 }
