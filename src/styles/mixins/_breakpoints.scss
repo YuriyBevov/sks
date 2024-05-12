@@ -71,7 +71,7 @@
 }
 
 @mixin m-b-tablet-lg-up {
-  @media (max-width: (960px)) {
+  @media (min-width: (960px)) {
     @content;
   }
 }

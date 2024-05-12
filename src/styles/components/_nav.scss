@@ -13,6 +13,11 @@
     @extend .flex-centered-content;
     @extend .lw-main-btn;
     padding: 8px;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
   }
 
   &__list {
@@ -21,10 +26,8 @@
   }
 
   &__list-item {
-    a {
-      display: flex;
-      font-weight: 700;
-      font-size: 14px;
+    a,
+    button {
       padding: 5px 10px;
       color: var(--white);
 
@@ -35,13 +38,12 @@
     }
   }
 
-  &__info {
+  &__footer {
     display: none;
   }
 
-  &__info {
+  &__footer {
     @extend .flex-column;
     padding: 20px;
-    margin-top: auto;
   }
 }

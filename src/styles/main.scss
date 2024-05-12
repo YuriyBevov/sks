@@ -7,6 +7,12 @@
 @import "extends";
 @import "common";
 
+@import "./components/ui/lw-main-btn";
+@import "./components/ui/lw-main-link";
+
+@import "./components/ui/burger";
+@import "./components/ui/webp-bg";
+
 @import "./layout/header";
 
 /* Компоненты */
@@ -19,10 +25,6 @@
 // @import "./components/loader";
 // @import "./components/main-slider";
 @import "./components/developer";
-@import "./components/ui/burger";
-@import "./components/ui/lw-main-btn";
-@import "./components/ui/lw-main-link";
-@import "./components/ui/webp-bg";
 
 // @import "./components/offer-form";
 

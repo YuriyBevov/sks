@@ -41,4 +41,41 @@
   .company-rights {
     margin-right: auto;
   }
+
+  .nav {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--main-offset);
+      max-width: 960px;
+
+      @include m-b-down(640px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        .lw-main-link,
+        .lw-main-btn {
+          position: relative;
+          padding-left: 60px;
+          text-align: left;
+          @include m-b-mobile-lg-down {
+            padding-left: 50px;
+          }
+
+          &::before {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            content: "";
+            @extend .line;
+
+            @include m-b-mobile-lg-down {
+              max-width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

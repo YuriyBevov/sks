@@ -38,6 +38,8 @@
   color: var(--lw-main-link-color);
   background-color: var(--lw-main-link-bg-color);
 
+  cursor: pointer;
+
   svg {
     fill: var(--lw-main-link-svg-fill-color);
     margin: 0 10px;

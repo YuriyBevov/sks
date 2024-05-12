@@ -15,13 +15,25 @@ nav.nav
 
   ul.nav__list
     li.nav__list-item
-      a(href="#about").anchor-link О нас
+      +main-link({
+        cls: 'anchor-link',
+        text: 'О нас',
+        href: '#about',
+      })
     li.nav__list-item
-      a(href="#products").anchor-link Продукция
+      +main-link({
+        cls: 'anchor-link',
+        text: 'Продукция',
+        href: '#products',
+      })
     li.nav__list-item
-      a(href="#clients").anchor-link Заказчикам
+      +main-link({
+        cls: 'anchor-link',
+        text: 'Заказчикам',
+        href: '#clients',
+      })
 
-  .nav__info
+  .nav__footer
     +main-link({
       text: '+7 916 076 4550',
       href: 'tel:+79160764550',

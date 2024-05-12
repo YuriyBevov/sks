@@ -2,7 +2,23 @@ mixin main-btn(data)
   if data.url
     a.lw-main-btn(href= data.url class = data.cls ? data.cls : null data-modal-anchor= data.modal ? data.modal : null data-modal-title= data.dataModalTitle ? data.dataModalTitle : null data-modal-text= data.dataModalText ? data.dataModalText : null)!= data.title
   else
-    button.lw-main-btn(class = data.cls ? data.cls : null data-modal-anchor= data.modal ? data.modal : null data-modal-title= data.dataModalTitle ? data.dataModalTitle : null data-modal-text= data.dataModalText ? data.dataModalText : null)!= data.title
+    if data.linkView
+      button(class= data.cls ? data.cls : null data-modal-anchor= data.modal ? data.modal : null data-modal-title= data.dataModalTitle ? data.dataModalTitle : null data-modal-text= data.dataModalText ? data.dataModalText : null).lw-main-link
+        if data.iconBefore
+          if data.iconBeforeType == 'svg'
+            svg(width= data.iconBeforeWidth height= data.iconBeforeHeight)
+              use(xlink:href=`./assets/sprite.svg#icon-${data.iconBeforeName}`)
+          if data.iconBeforeType == 'img'
+            img(src=`./assets/img/${data.iconBeforeName}.${data.iconBeforeFileType}` alt= data.iconBeforeAlt width= data.iconBeforeWidth height= data.iconBeforeHeight)
+        span!= data.title
 
+        if data.iconAfter
+          if data.iconAfterType == 'svg'
+            svg(width= data.iconAfterWidth height= data.iconAfterHeight)
+              use(xlink:href=`./assets/sprite.svg#icon-${data.iconAfterName}`)
+          if data.iconAfterType == 'img'
+            img(src=`./assets/img/${data.iconAfterName}${data.iconAfterFileType}` alt= data.iconAfterAlt width= data.iconAfterWidth height= data.iconAfterHeight)
+    else
+      button.lw-main-btn(class = data.cls ? data.cls : null data-modal-anchor= data.modal ? data.modal : null data-modal-title= data.dataModalTitle ? data.dataModalTitle : null data-modal-text= data.dataModalText ? data.dataModalText : null)!= data.title
   if data.notice
     small!= data.notice

@@ -10,6 +10,43 @@
   </head>
   <body>
     <div class="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+    <header class="header">
+      <div class="lw-container header__container"><a class="lw-main-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="«Спецкоплектсервис»" width="320" height="60"></a>
+        <div class="header__nav">
+          <nav class="nav">
+            <div class="nav__header"><a class="lw-main-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="«Спецкоплектсервис»" width="320" height="60"></a>
+              <button class="lw-main-btn nav-closer" type="button" aria-label="Закрыть меню">
+                <svg width="20" height="20">
+                  <use xlink:href="./assets/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__list-item"><a class="anchor-link lw-main-link" href="#about"><span>О нас</span></a>
+              </li>
+              <li class="nav__list-item"><a class="anchor-link lw-main-link" href="#products"><span>Продукция</span></a>
+              </li>
+              <li class="nav__list-item"><a class="anchor-link lw-main-link" href="#clients"><span>Заказчикам</span></a>
+              </li>
+            </ul>
+            <div class="nav__footer"><a class="lw-main-link" href="tel:+79160764550">
+                          <svg width="32" height="32">
+                            <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+                          </svg><span>+7 916 076 4550</span></a><a class="lw-main-link" href="mailto:zakaz@sks.msk.ru">
+                          <svg width="38" height="24">
+                            <use xlink:href="./assets/sprite.svg#icon-mail"></use>
+                          </svg><span>zakaz@sks.msk.ru</span></a>
+            </div>
+          </nav>
+        </div>
+            <button class="lw-main-btn header__order-btn" data-modal-anchor="offer">Заказать звонок</button>
+        <button class="burger" type="button" aria-label="Открыть меню">
+          <svg width="20" height="20">
+            <use xlink:href="./assets/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="lw-container">
@@ -86,7 +123,22 @@
           </div>
               <button class="lw-main-btn footer__order-btn" data-modal-anchor="offer">Оставить заявку</button>
         </div>
-        <div class="footer__section"></div>
+        <div class="footer__section">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item"><a class="anchor-link lw-main-link" href="#about"><span>О нас</span></a>
+              </li>
+              <li class="nav__list-item"><a class="anchor-link lw-main-link" href="#products"><span>Продукция</span></a>
+              </li>
+              <li class="nav__list-item"><a class="anchor-link lw-main-link" href="#clients"><span>Заказчикам</span></a>
+              </li>
+              <li class="nav__list-item">
+                          <button class="anchor-link lw-main-link" data-modal-anchor="law"><span>Политика обработки персональных данных</span>
+                          </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div class="footer__section"><span class="lw-base-text company-rights">Copyright © ООО «Спецкоплектсервис»,<span class="js-current-year">&nbsp;2024</span>год</span><a class="developer" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ" target="_blank"><span class="lw-base-text">Создано в</span><img loading="lazy" src="./assets/img/icon-developer.svg" width="280" height="40" alt="LittleWeb.ru - создание сайтов под ключ"></a>
         </div>
       </div>
