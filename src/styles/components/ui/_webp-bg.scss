@@ -45,3 +45,19 @@
     }
   }
 }
+
+.no-webp .lw-pattern-wrapper::before {
+  background-image: url("../assets/img/main-section-underflow-img@1x.jpg");
+
+  @media (min-resolution: var(--retina-dppx)) and (min-resolution: var(--retina-dpi)) {
+    background-image: url("../assets/img/main-section-underflow-img@2x.jpg");
+  }
+}
+
+.webp .lw-pattern-wrapper::before {
+  background-image: url("../assets/img/main-section-underflow-img@1x.webp");
+
+  @media (min-resolution: var(--retina-dppx)) and (min-resolution: (--retina-dpi)) {
+    background-image: url("../assets/img/main-section-underflow-img@2x.webp");
+  }
+}
