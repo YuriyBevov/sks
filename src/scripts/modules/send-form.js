@@ -1,5 +1,7 @@
 import { Modal } from "../classes/Modal";
 
+const GOOGLE_CAPTHCA_V_3_SITE_KEY = "6Lc1_dspAAAAAK5Myo8l_GnHs4Jvl2loostj7qH5";
+
 export function sendForm(form) {
   const loader = document.querySelector(".loader");
   const successModal = document.querySelector(".success-modal");
@@ -31,22 +33,29 @@ export function sendForm(form) {
     }).show();
   }
 
-  // handle the form submission event
-  const data = new FormData(form);
-  ajax(form.method, form.action, data, success, error);
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute(GOOGLE_CAPTHCA_V_3_SITE_KEY, { action: "submit" })
+      .then(function (token) {
+        form.querySelector(".g-recaptcha-response").value = token;
 
-  function ajax(method, url, data, success, error) {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }
+        const data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+
+        function ajax(method, url, data, success, error) {
+          const xhr = new XMLHttpRequest();
+          xhr.open(method, url);
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+              success(xhr.response, xhr.responseType);
+            } else {
+              error(xhr.status, xhr.response, xhr.responseType);
+            }
+          };
+          xhr.send(data);
+        }
+      });
+  });
 }
